@@ -153,15 +153,12 @@ body {
     width: 120%; /* Increase width of phone2 */
     margin-right: 0; 
 }
-  .btnContainer {
-    display: flex; /* Use flexbox to center the button */
-    justify-content: center; 
-    margin-top: 40vh; 
-    margin-bottom: 0;
-    text-align: center;
-    position: absolute; 
-    top: calc(50% + 5vh); /* Adjust the top value based on the container's height */
-    left: 50%; /* Center the button container */
-    transform: translateX(-50%); 
-  }
+.btnContainer {
+  display: flex; 
+  justify-content: center; 
+  margin-top: 35vh; /* Adjust margin to push it down */
+  margin-bottom: 15vh;
+  text-align: center;
+  position: relative; /* Changed to relative to avoid the button getting fixed */
+}
 }
