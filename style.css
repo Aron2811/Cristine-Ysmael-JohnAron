@@ -85,33 +85,27 @@ body {
 }
 
 
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px); /* Small vertical movement */
+@keyframes float {
+  0%, 100% {
+      transform: translate(-50%, 0px); 
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0); /* Returns to original position */
+  50% {
+      transform: translate(-50%, -10px); 
   }
-}
-
-.header {
-  animation: slideDown 1s ease-in-out;
-  animation-fill-mode: forwards; /* Ensure the element stays in place after animation */
 }
 
 @media (max-width: 896px) and (min-width: 320px) {
   body, html {
     margin: 0; 
     padding: 0; 
-    height: 105%; /* Allow full height */
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    height: 105%; 
+    overflow-x: hidden; 
     overflow-y: auto;
   }
 
   .header {
     height: auto; /* Adjust height based on content */
+    background: linear-gradient(-45deg, #996FD6, #C6A6F7, #721BF5, #7E3BE3 );
     background-size: cover;
     padding: 0 -1%; 
     margin: 0; 
@@ -158,29 +152,33 @@ body {
     padding: 0; 
     margin-top: 35vh;
     left: 50%; /* Center the container */
-    transform: translateX(-50%); /* Adjust to truly center it */ 
-    
+    transform: translateX(-50%);
+    animation: float 3s ease-in-out infinite;
+    transform-origin: center;
 }
 
 .phone1 {
     z-index: 5;
-    width: 90%; /* Increase width of phone1 */
+    width: 90%; 
     margin-right: -50%; 
     margin-top: 50%; 
 }
 
 .phone2 {
-    width: 120%; /* Increase width of phone2 */
+    width: 120%; 
     margin-right: 0; 
 }
 .btnContainer {
   display: flex; 
   justify-content: center; 
-  margin-top: 35vh; /* Adjust margin to push it down */
+  margin-top: 35vh; 
   margin-bottom: 15vh;
   text-align: center;
-  position: relative; /* Changed to relative to avoid the button getting fixed */
+  position: relative; 
 }
+
+
+
 }
 
 
