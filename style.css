@@ -84,6 +84,23 @@ body {
   border-color: #A571F5;
 }
 
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Small vertical movement */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Returns to original position */
+  }
+}
+
+.header {
+  animation: slideDown 1s ease-in-out;
+  animation-fill-mode: forwards; /* Ensure the element stays in place after animation */
+}
+
 @media (max-width: 896px) and (min-width: 320px) {
   body, html {
     margin: 0; 
@@ -114,6 +131,7 @@ body {
     font-size: 4vw; 
     width: 80%; 
     margin-top: 5%;
+    
   }
 
   .header ul li a {
@@ -123,6 +141,7 @@ body {
   .btn {
     font-size: 4vw; 
     padding: 2% 5%;
+    
   }
 
   .header {
@@ -140,6 +159,7 @@ body {
     margin-top: 35vh;
     left: 50%; /* Center the container */
     transform: translateX(-50%); /* Adjust to truly center it */ 
+    
 }
 
 .phone1 {
@@ -162,3 +182,5 @@ body {
   position: relative; /* Changed to relative to avoid the button getting fixed */
 }
 }
+
+
